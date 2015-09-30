@@ -1,0 +1,7 @@
+Program se pokreće u platformi KNIME koju je potrebno imati instaliranu na računalu. Prije pokretanja, važno je u datoteci knime.ini promijeniti konfiguraciju na 8192mb, rad s manjom memorijom nije moguć na količini podataka s kojom sam radio (možda i je, ali ovo je konfiguracija na kojoj sam ja radio, manje od 1024mb vrlo vjerojatno neće proći. U nastavku je primjer kako knime.ini datoteka treba izgledati:
+
+-startup plugins/org.eclipse.equinox.launcher_1.2.0.v20110502.jar --launcher.library plugins/org.eclipse.equinox.launcher.win32.win32.x86_1.1.100.v20110502 -vmargs -XX:MaxPermSize=8192m -server -Dsun.java2d.d3d=false -Dosgi.classloader.lock=classname -XX:+UnlockDiagnosticVMOptions -XX:+UnsyncloadClass -Dknime.enable.fastload=true -Xmx8192m
+
+Jednom kada je KNIME pokrenut, workflow treba se importati (naredba Import nalazi se unutar prozora File) iz unzippanog dokumenta josipkraj.rar.
+
+U workflowu se nalazi primjer pokretanih algoritama, SVM i k means. Uz to se nalaze brojni čvorovi, a čija je funkcija opisana u poslanom radu.
